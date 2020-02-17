@@ -5,11 +5,13 @@ import './App.css';
 import Topbar from "./Topbar.js";
 import Counter from "./Counter.js";
 import FitBit from "./FitBit.js";
+import Axios from 'axios';
 
 class App extends React.Component {
   state = {
     like: 0,
-    dislike: 0
+    dislike: 0,
+    datalist: []
   }
 
   onLikeIncrement = () => {
@@ -45,10 +47,29 @@ class App extends React.Component {
 
   //   return true;
   // }
+// let videoData = [];
+//   componentDidMount() {
+//     Axios.get(`https://5d76bf96515d1a0014085cf9.mockapi.io/playlist`)
+//       .then(res=> {
+//     videoData = [...res.data];
+
+//     this.setState({datalist: videoData });
+//     console.log(videoData);
+//       })
+
+
+//   }
 
   render() {
+    // const videoCards = videoData.map((item) => {
+    //   return(
+    //     <videoCards title = {item.title} />
+    //   )
+    // })
     return(
       <div>
+        {/* <div></div>
+        {videoCards} */}
         <Topbar like={this.state.like} dislike ={this.state.dislike} />
         <FitBit/>
         {/* <Counter onLikeIncreamentClicked = {this.onLikeIncrement} onLikeDecreamentClicked = {this.onLikeDecrement} onDislikeIncreamentClicked = {this.onDislikeIncrement} onDislikeDecreamentClicked = {this.onDislikeDecrement}/> */}
