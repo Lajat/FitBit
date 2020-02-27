@@ -31,14 +31,6 @@
     margin-top: -5px;
     display: flex;
 }
-/* .band {
-    height:40px;
-    width:60px;
-    overflow:hidden;
-    border-radius:3px;
-    margin-right:10px;
-    cursor:pointer;
-} */
 .redband {
     height: 40px;
     width: 60px;
@@ -102,6 +94,7 @@
     background-color: grey;
     font-size: 20px;
     cursor: pointer;
+    border: none;
 }
 .btn:hover {
     transform: scale(1.1, 1.1);
